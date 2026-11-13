@@ -1,0 +1,40 @@
+LOJA: Floco & Pinheiro (empório natalino)
+SEGMENTO: Outro (enfeites, iluminação, decoração, ceia, doces, presentes e roupas de Natal)
+          -> confirmar a autorização prévia do professor para este segmento
+TURMA: 1TI_
+INTEGRANTES:
+- Bruno - no ____
+- Kauã - no ____
+
+LINKS:
+Site (GitHub Pages): https://usuario.github.io/nome-do-repositorio/
+Repositório (GitHub): https://github.com/usuario/nome-do-repositorio
+Vídeo (YouTube): https://www.youtube.com/watch?v=...
+
+RECURSOS DE JAVASCRIPT IMPLEMENTADOS (mínimo de 8) - arquivo js/script.js:
+1. Slideshow (obrigatório) - index.html
+2. Parallax (obrigatório) - todas as páginas (4 camadas na Home, 2 nas demais)
+3. Sons (obrigatório) - todas as páginas (música com botão ligar/desligar + sons ao clicar)
+4. Cards dinâmicos, 50 produtos (obrigatório) - index.html, produtos.html e ofertas.html
+5. Filtro e busca (obrigatório) - produtos.html
+6. Carrinho de compras com localStorage - todas as páginas
+7. Contagem regressiva até o Natal (setInterval) - ofertas.html (e "faltam X dias" na index.html)
+8. Validação de formulário - contato.html
+9. Menu responsivo (hambúrguer) - todas as páginas
+10. Modal de detalhes e Lightbox - produtos.html e ofertas.html
+11. Efeito de neve (canvas) - todas as páginas
+12. Animação ao rolar (IntersectionObserver) - todas as páginas
+
+ESTRUTURA:
+index.html, produtos.html, sobre.html, ofertas.html, contato.html
+css/style.css, css/responsivo.css
+js/produtos.js (array com os 50 produtos), js/script.js (todos os recursos)
+img/ (favicon, banners/ e produtos/ - uma imagem para cada produto)
+
+CRÉDITOS (imagens, sons e ícones):
+- Imagens dos produtos e dos banners: ilustrações em SVG geradas por código pela própria equipe
+  (sem fotos de terceiros, livres de direitos autorais). Os desenhos dos produtos usam emojis,
+  que aparecem conforme a fonte de emojis do sistema de cada visitante.
+- Sons: música e sininhos sintetizados pelo navegador (Web Audio API), sem arquivos de áudio.
+  Melodias de domínio público: "Jingle Bells" e "We Wish You a Merry Christmas".
+- Fontes: Google Fonts (Fraunces e Nunito Sans).

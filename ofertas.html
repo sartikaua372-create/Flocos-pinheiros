@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ofertas de Natal da Floco &amp; Pinheiro com descontos de até 25%.">
+  <title>Ofertas | Floco &amp; Pinheiro</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html" aria-label="Floco e Pinheiro, página inicial">Floco <em>&amp;</em> Pinheiro</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="ofertas.html" aria-current="page">Ofertas</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrinho" type="button" data-abrir-carrinho
+        aria-label="Abrir carrinho de compras">Carrinho<span class="contador-carrinho">0</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="banner" aria-labelledby="titulo-pagina">
+      <div class="camada ceu" data-vel="0.4" aria-hidden="true"></div>
+      <div class="camada estrelas" data-vel="0.3" aria-hidden="true"></div>
+      <div class="banner-conteudo" data-vel="0.2">
+        <h1 id="titulo-pagina">Ofertas</h1>
+        <p>Descontos de até 25% até o Natal.</p>
+      </div>
+    </section>
+
+    <section class="sec container" aria-labelledby="t-contagem">
+      <div class="sec-titulo reveal">
+        <h2 id="t-contagem">As ofertas terminam no Natal</h2>
+      </div>
+      <div class="reveal">
+        <!-- o JS preenche dias, horas, minutos e segundos (data-u) -->
+        <div class="contagem" id="contagem" role="timer" aria-label="Tempo restante até o Natal">
+          <div><strong data-u="dias">00</strong><span>dias</span></div>
+          <div><strong data-u="horas">00</strong><span>horas</span></div>
+          <div><strong data-u="min">00</strong><span>minutos</span></div>
+          <div><strong data-u="seg">00</strong><span>segundos</span></div>
+        </div>
+        <p class="msg-natal" data-msg-natal></p>
+      </div>
+    </section>
+
+    <aside class="container" aria-label="Cupons de desconto">
+      <div class="aviso reveal">
+        <p>Os cupons <span class="cupom-codigo">NATAL10</span> (10%) e <span class="cupom-codigo">PINHEIRO15</span>
+          (15%) valem no carrinho, além do desconto do produto.</p>
+      </div>
+    </aside>
+
+    <section class="sec container" aria-labelledby="t-ofertas">
+      <div class="sec-titulo reveal">
+        <h2 id="t-ofertas">Produtos em oferta</h2>
+        <p><span id="total-ofertas">10</span> produtos com desconto. Use o botão "Ampliar" para ver a imagem maior.</p>
+      </div>
+      <!-- o JS cria os cards dos produtos que têm desconto -->
+      <div class="grade" id="grade-ofertas"></div>
+    </section>
+
+    <!-- lightbox: imagem ampliada, aberta pelo botão "Ampliar" de cada card -->
+    <dialog id="lightbox" class="modal lightbox" aria-label="Imagem ampliada do produto">
+      <div class="lb-corpo">
+        <button class="modal-fechar" id="lb-fechar" type="button" aria-label="Fechar imagem ampliada">Fechar</button>
+        <button class="lb-nav lb-ant" id="lb-ant" type="button" aria-label="Imagem anterior">‹</button>
+        <figure>
+          <img id="lb-img" src="img/favicon.svg" alt="Imagem ampliada do produto" width="600" height="600">
+          <figcaption id="lb-legenda"></figcaption>
+        </figure>
+        <button class="lb-nav lb-prox" id="lb-prox" type="button" aria-label="Próxima imagem">›</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <p class="rodape-tit">Floco &amp; Pinheiro</p>
+        <p>Loja de artigos de Natal desde 1998.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Nossa missão</p>
+        <p>Levar a magia do Natal para cada cantinho, com produtos especiais e muito carinho.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Contato</p>
+        <p>Rua das Renas, 25, Polo Norte Paulista, SP<br>(19) 3225-1225</p>
+      </div>
+    </div>
+    <p class="rodape-copy">© <span data-ano>2026</span> Floco &amp; Pinheiro · Projeto Loja Natalina <br>Imagens:
+      ilustrações em jpeg feitas pela equipe · Sons: gerados no navegador (Web
+      Audio API) · Fontes: Google Fonts</p>
+  </footer>
+  <!-- produtos.js precisa vir antes do script.js -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

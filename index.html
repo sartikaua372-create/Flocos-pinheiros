@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Floco &amp; Pinheiro: árvores, luzes, enfeites, doces e presentes de Natal.">
+  <title>Floco &amp; Pinheiro | Loja de Natal</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html" aria-label="Floco e Pinheiro, página inicial">Floco <em>&amp;</em> Pinheiro</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrinho" type="button" data-abrir-carrinho
+        aria-label="Abrir carrinho de compras">Carrinho<span class="contador-carrinho">0</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <!-- parallax: 4 camadas que se movem em velocidades diferentes (data-vel) -->
+      <div class="camada ceu" data-vel="0.45" aria-hidden="true"></div>
+      <div class="camada estrelas" data-vel="0.35" aria-hidden="true"></div>
+      <div class="hero-conteudo">
+        <p class="selo-dias">Faltam <strong data-dias-natal>--</strong> dias para o Natal</p>
+        <h1 id="titulo-hero">Tudo para o seu Natal em um só lugar</h1>
+        <p>Árvores, luzes, enfeites, doces e presentes para montar a decoração e a ceia.</p>
+        <div class="hero-botoes">
+          <a class="btn" href="produtos.html">Ver produtos</a>
+          <a class="btn btn-sec" href="ofertas.html">Ofertas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec container" aria-label="Destaques em promoção">
+      <div class="slideshow" id="slideshow">
+        <article class="slide ativo">
+          <img src="img/banners/banner-iluminacao.jpg" alt="Luzes de Natal douradas" width="1200" height="460">
+          <div class="slide-texto">
+            <h3>Iluminação com até 20% de desconto</h3>
+            <p>Pisca-piscas, cortinas de luz e bonecos luminosos.</p>
+            <a class="btn btn-sec" href="produtos.html?cat=Ilumina%C3%A7%C3%A3o">Ver iluminação</a>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="img_flocos/banners/banner_caixa_surpresa.jpeg" alt="Luzes de Natal douradas" width="1200"
+            height="460">
+          <div class="slide-texto">
+            <h3>Caixa Surpresa do Papai Noel</h3>
+            <p>Cinco presentes em uma só caixa, com 20% de desconto.</p>
+            <a class="btn btn-sec" href="ofertas.html">Ver ofertas</a>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="img_flocos/banners/banner_doces_para_ceia.jpeg" alt="Biscoitos de gengibre e panetone" width="1200"
+            height="460">
+          <div class="slide-texto">
+            <h3>Doces para a ceia</h3>
+            <p>Panetones, chocolates e biscoitos de gengibre.</p>
+            <a class="btn btn-sec" href="produtos.html?cat=Doces%20e%20Chocolates">Ver doces</a>
+          </div>
+        </article>
+
+        <button class="sl-prev" type="button" aria-label="Slide anterior">‹</button>
+        <button class="sl-next" type="button" aria-label="Próximo slide">›</button>
+        <div class="sl-dots"></div>
+      </div>
+    </section>
+
+    <section class="sec container" aria-labelledby="t-destaques">
+      <div class="sec-titulo reveal">
+        <h2 id="t-destaques">Destaques</h2>
+      </div>
+      <!-- o JS cria os cards dos produtos com destaque: true -->
+      <div class="grade" id="destaques"></div>
+      <p class="reveal centro-topo"><a class="btn" href="produtos.html">Ver todos os produtos</a></p>
+    </section>
+
+    <aside class="container" aria-label="Cupom de desconto">
+      <div class="aviso reveal">
+        <p>Use o cupom <span class="cupom-codigo">NATAL10</span> no carrinho até 27/11 e ganhe 10% de desconto.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <p class="rodape-tit">Floco &amp; Pinheiro</p>
+        <p>Loja de artigos de Natal desde 1998.</p>
+      </div>
+
+      <div>
+        <p class="rodape-tit">Nossa missão</p>
+        <p>Levar a magia do Natal para cada cantinho, com produtos especiais e muito carinho.</p>
+      </div>
+
+      <div>
+        <p class="rodape-tit">Contato</p>
+        <p>Rua das Renas, 25, Polo Norte Paulista, SP<br>(19) 3225-1225</p>
+      </div>
+    </div>
+    <p class="rodape-copy">© <span data-ano>2026</span> Floco &amp; Pinheiro · Projeto Loja Natalina <br>Imagens:
+      ilustrações em jpeg feitas pela equipe · Sons: gerados no navegador (Web
+      Audio API) · Fontes: Google Fonts</p>
+  </footer>
+  <!-- produtos.js precisa vir antes do script.js -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

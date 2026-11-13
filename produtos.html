@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Catálogo da Floco &amp; Pinheiro com 50 produtos de Natal, com busca e filtro por categoria.">
+  <title>Produtos | Floco &amp; Pinheiro</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html" aria-label="Floco e Pinheiro, página inicial">Floco <em>&amp;</em> Pinheiro</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html" aria-current="page">Produtos</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrinho" type="button" data-abrir-carrinho
+        aria-label="Abrir carrinho de compras">Carrinho<span class="contador-carrinho">0</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="banner" aria-labelledby="titulo-pagina">
+      <div class="camada ceu" data-vel="0.4" aria-hidden="true"></div>
+      <div class="camada estrelas" data-vel="0.3" aria-hidden="true"></div>
+      <div class="banner-conteudo" data-vel="0.2">
+        <h1 id="titulo-pagina">Produtos</h1>
+        <p>50 itens para a decoração, a ceia e os presentes.</p>
+      </div>
+    </section>
+
+    <div class="container layout-catalogo sec">
+      <!-- filtros: busca por nome, categorias, ordem e favoritos -->
+      <aside class="filtros" aria-labelledby="t-filtros">
+        <h2 id="t-filtros">Filtrar</h2>
+        <div class="campo">
+          <label for="busca">Buscar por nome</label>
+          <input type="search" id="busca" placeholder="Ex.: árvore, vela, panetone" autocomplete="off">
+        </div>
+        <p class="rotulo" id="rot-cats">Categorias</p>
+        <ul class="cats" id="lista-cats" aria-labelledby="rot-cats"></ul>
+        <div class="campo">
+          <label for="ordem">Ordenar por</label>
+          <select id="ordem">
+            <option value="relevancia">Destaques</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+            <option value="nome">Nome (A-Z)</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" id="so-favoritos"> Só favoritos</label>
+        <button class="btn btn-sec btn-pq" type="button" id="limpar-filtros">Limpar filtros</button>
+      </aside>
+
+      <section class="catalogo" aria-labelledby="t-catalogo">
+        <h2 id="t-catalogo">Catálogo</h2>
+        <p id="contador" class="contador" role="status" aria-live="polite">Mostrando 50 de 50 produtos</p>
+        <!-- o JS cria os 50 cards a partir do array produtos (js/produtos.js) -->
+        <div class="grade" id="grade"></div>
+        <div class="vazio" id="vazio" hidden>
+          <h3>Nenhum produto encontrado</h3>
+          <p>Tente outro nome ou limpe os filtros.</p>
+          <button class="btn" type="button" id="limpar-vazio">Limpar filtros</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <p class="rodape-tit">Floco &amp; Pinheiro</p>
+        <p>Loja de artigos de Natal desde 1998.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Nossa missão</p>
+        <p>Levar a magia do Natal para cada cantinho, com produtos especiais e muito carinho.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Contato</p>
+        <p>Rua das Renas, 25, Polo Norte Paulista, SP<br>(19) 3225-1225</p>
+      </div>
+    </div>
+    <p class="rodape-copy">© <span data-ano>2026</span> Floco &amp; Pinheiro · Projeto Loja Natalina <br>Imagens:
+      ilustrações em jpeg feitas pela equipe · Sons: gerados no navegador (Web
+      Audio API) · Fontes: Google Fonts</p>
+  </footer>
+  <!-- produtos.js precisa vir antes do script.js -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

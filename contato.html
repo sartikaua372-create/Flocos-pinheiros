@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Fale com a Floco &amp; Pinheiro: formulário de contato, endereço, telefone e horário.">
+  <title>Contato | Floco &amp; Pinheiro</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html" aria-label="Floco e Pinheiro, página inicial">Floco <em>&amp;</em> Pinheiro</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrinho" type="button" data-abrir-carrinho
+        aria-label="Abrir carrinho de compras">Carrinho<span class="contador-carrinho">0</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="banner" aria-labelledby="titulo-pagina">
+      <div class="camada ceu" data-vel="0.4" aria-hidden="true"></div>
+      <div class="camada estrelas" data-vel="0.3" aria-hidden="true"></div>
+      <div class="banner-conteudo" data-vel="0.2">
+        <h1 id="titulo-pagina">Contato</h1>
+        <p>Tire dúvidas ou mande uma sugestão.</p>
+      </div>
+    </section>
+
+    <div class="container sec duas-col">
+      <section aria-labelledby="t-form">
+        <article class="painel reveal">
+          <h2 id="t-form">Envie sua mensagem</h2>
+          <!-- novalidate desliga a validação padrão do navegador; quem valida é o JS -->
+          <form id="form-contato" novalidate>
+            <div class="campo">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="erro-nome">
+              <small class="erro" id="erro-nome"></small>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="erro-email">
+              <small class="erro" id="erro-email"></small>
+            </div>
+            <div class="campo">
+              <label for="assunto">Assunto *</label>
+              <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
+                <option value="">Selecione...</option>
+                <option>Dúvida sobre produtos</option>
+                <option>Pedido e entrega</option>
+                <option>Trocas e devoluções</option>
+                <option>Parcerias</option>
+                <option>Elogios e sugestões</option>
+              </select>
+              <small class="erro" id="erro-assunto"></small>
+            </div>
+            <div class="campo">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" rows="6" maxlength="500" required
+                aria-describedby="erro-mensagem"></textarea>
+              <div class="campo-rodape"><small class="erro" id="erro-mensagem"></small><small
+                  id="contador-msg">0/500</small></div>
+            </div>
+            <button class="btn" type="submit">Enviar mensagem</button>
+            <p id="status-form" class="status" role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </section>
+
+      <aside aria-labelledby="t-info">
+        <div class="painel reveal">
+          <h2 id="t-info">Informações da loja</h2>
+          <ul class="info-lista">
+            <li><strong>Endereço</strong>Rua das Renas, 25, Polo Norte Paulista, SP</li>
+            <li><strong>Telefone</strong>(19) 3225-1225</li>
+            <li><strong>E-mail</strong>contato@flocoepinheiro.exemplo</li>
+            <li><strong>Horário</strong>Seg a sáb, 9h às 20h. Domingos de dezembro, 10h às 18h.</li>
+            <li><strong>Instagram</strong>@flocoepinheiro</li>
+          </ul>
+          <figure class="mapa">
+            <figure class="mapa">
+              <img src="img_flocos/fachada_contato/fachada_da_loja.jpg"
+                alt="Fachada da loja Floco & Pinheiro decorada para o Natal">
+              <figcaption>Nossa fachada na Rua das Renas, 25.</figcaption>
+            </figure>
+
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <p class="rodape-tit">Floco &amp; Pinheiro</p>
+        <p>Loja de artigos de Natal desde 1998.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Nossa missão</p>
+        <p>Levar a magia do Natal para cada cantinho, com produtos especiais e muito carinho.</p>
+      </div>
+      <div>
+        <p class="rodape-tit">Contato</p>
+        <p>Rua das Renas, 25, Polo Norte Paulista, SP<br>(19) 3225-1225</p>
+      </div>
+    </div>
+    <p class="rodape-copy">© <span data-ano>2026</span> Floco &amp; Pinheiro · Projeto Loja Natalina <br>Imagens:
+      ilustrações em jpeg feitas pela equipe · Sons: gerados no navegador (Web
+      Audio API) · Fontes: Google Fonts</p>
+  </footer>
+  <!-- produtos.js precisa vir antes do script.js -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
